@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+    
+    body {
+    background-image: url('ASSETS/Mascots.svg');
+    background-repeat: no-repeat;
+    background-size: width;
+    background-position: center;
+
+    }
+    </style>
+</head>
+<body>
+<div class="language">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+            <p class="h2m language-heading">Language</p>
+            <br>
+
+
+        <div class="dropdown bodytext">
+            <button onclick="toggleDropdown()" class="dropdown-btn" id="dropdownBtn">Select Language</button>
+            <div id="dropdown-content" class="dropdown-content">
+                <a href="#" onclick="selectLanguage(event, 'English')">English</a>
+                <a href="#" onclick="selectLanguage(event, 'Bahasa Indonesia')">Bahasa Indonesia</a>
+            </div>
+        </div>
+
+        <div class="pages">
+            <img src="ICONS/BACK KIRI.svg" alt="" style="opacity: 0;">
+            <img src="ICONS/page2.svg" alt="">
+            <a href="who.html"> <img src="ICONS/BACK KANAN.svg" alt=""> </a>
+        </div>
+</div>
+
+
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById("dropdown-content");
+            const dropdownBtn = document.getElementById("dropdownBtn");
+            
+            // Toggle dropdown visibility
+            dropdownContent.classList.toggle("show");
+            
+            // Toggle the active class to rotate the arrow
+            dropdownBtn.classList.toggle("active");
+        }
+
+        function selectLanguage(event, language) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
+            
+            const dropdownBtn = document.getElementById("dropdownBtn");
+            
+            // Set the dropdown button text to the selected language
+            dropdownBtn.innerText = language;
+            
+            // Close the dropdown and reset arrow direction
+            toggleDropdown();
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                const dropdownContent = document.getElementById("dropdown-content");
+                const dropdownBtn = document.getElementById("dropdownBtn");
+                
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                    dropdownBtn.classList.remove("active");
+                }
+            }
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

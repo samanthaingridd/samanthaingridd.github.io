@@ -1,0 +1,185 @@
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.background {
+    background-color: var(--red);
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--value1);
+    padding: var(--value3) var(--value2);
+
+}
+
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+}
+
+
+.text {
+    text-align: center;
+}
+
+
+
+.info {
+    display: flex;
+    align-items: center;
+    /* Ensures icon and text are aligned */
+    gap: var(--value1);
+    /* Space between icon and text */
+}
+
+.info img {
+    width: 24px;
+    /* Adjust icon size as needed */
+    height: 24px;
+}
+
+.textcontent {
+    text-align: justify;
+}
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+    padding-bottom: var(--value1);
+}
+.captionm{
+    font-size: var(--caption);
+    color: var(--maroon); 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+.illustration {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+
+.backbtn {
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+    z-index: 10; 
+}
+
+.cover {
+    position: relative;
+    height: 312px;
+    border-radius: 0 0 var(--value2) var(--value2);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+.cover img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+}
+.title {
+    margin: 0 var(--value3) 0 var(--value3);
+    position: relative; /* Position the title absolutely within the cover */
+    bottom: 72px; /* Distance from the bottom of the container */
+   
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds shadow to make the text stand out */
+}
+
+.textarticle {
+    text-align: justify;
+    padding: 0 var(--value3);
+    padding-bottom: var(--value3);
+    color: var(--maroon);
+}
+li{
+    margin-top: var(--value2);
+    margin-left: var(--value3);
+    margin-bottom: var(--value2);
+    
+}
+
+
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    font-weight: bold;
+    line-height: var(--value4);
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+.icon{
+    padding: var(--value2) var(--value3) var(--value2) var(--value3);
+    display: flex;
+    justify-content: space-between;
+}
+
+.like {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align horizontally */
+    margin-bottom: 16px; /* Space below the like section */
+}
+
+#likeButton {
+    width: 32px; /* Adjust the size of the like icon */
+    height: 32px;
+    margin-bottom: 8px; /* Space between the icon and the caption */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+

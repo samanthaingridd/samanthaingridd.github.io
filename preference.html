@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Preference</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-nav">
+                <a href="profile.html"> <img src="ASSETS/BACK KIRI.svg"> </a>
+                <p class="h2w"> Preference</p>
+            </div>
+        </div>
+
+        <div class="main-content">
+                <p class="h2m">Language</p>
+                <br>
+
+                <div class="dropdown bodytext">
+                    <button onclick="toggleDropdown()" class="dropdown-btn" id="dropdownBtn">Select Language</button>
+                    <div id="dropdown-content" class="dropdown-content">
+                        <a href="#" onclick="selectLanguage(event, 'English')">English</a>
+                        <a href="#" onclick="selectLanguage(event, 'Bahasa Indonesia')">Bahasa Indonesia</a>
+                    </div>
+                </div>
+                <br><br>
+                <br>
+
+                <p class="h2m">Notification</p>
+
+                <div class="toggle-container">
+                    <p class="subtextm">Reminders</p>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="toggle-container">
+                    <p class="subtextm">Announcement</p>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById("dropdown-content");
+            const dropdownBtn = document.getElementById("dropdownBtn");
+    
+            // Toggle dropdown visibility
+            dropdownContent.classList.toggle("show");
+    
+            // Toggle the active class to rotate the arrow
+            dropdownBtn.classList.toggle("active");
+        }
+    
+        function selectLanguage(event, language) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
+    
+            const dropdownBtn = document.getElementById("dropdownBtn");
+    
+            // Set the dropdown button text to the selected language
+            dropdownBtn.innerText = language;
+    
+            // Close the dropdown and reset arrow direction
+            toggleDropdown();
+        }
+    
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn')) {
+                const dropdownContent = document.getElementById("dropdown-content");
+                const dropdownBtn = document.getElementById("dropdownBtn");
+    
+                if (dropdownContent.classList.contains('show')) {
+                    dropdownContent.classList.remove('show');
+                    dropdownBtn.classList.remove("active");
+                }
+            }
+        }
+    </script>

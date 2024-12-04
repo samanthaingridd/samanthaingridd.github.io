@@ -1,0 +1,434 @@
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+/* BUTTONS */
+button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-weight: bold;
+}
+
+
+/* CARD */
+.card {
+    width: 156px;
+    height: 176px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card .cardcontent {
+    padding: 10px;
+
+}
+
+.card p {
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+
+/* TEXT STYLE */
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+.h1w {
+    font-size: var(--heading1);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+}
+
+h3 {
+    font-size: var(--heading3);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+.subtext {
+    font-size: var(--subtext);
+    color: var(--black);
+}
+
+.subtextb {
+    font-size: var(--subtext);
+    color: var(--black);
+    font-weight: bold;
+}
+
+.captionm {
+    font-size: var(--caption);
+    color: var(--maroon);
+}
+
+.captionw {
+    font-size: var(--caption);
+    color: var(--white);
+}
+
+.captionb r {
+    font-size: var(--caption);
+    color: var(--red);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    background-color: var(--red);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 40px -20px rgba(0, 0, 0, 1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 8px 0px 8px;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* Ensures each item takes up equal space */
+    padding: 8px;
+    position: relative;
+    /* Set to relative for proper positioning of the hover background */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: var(--caption);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ensures anchor element fills the navbar height */
+    position: relative;
+    /* Keep the positioning relative to the li */
+}
+
+.navbar ul li a .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    /* Space between icon and text */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar ul li:hover {
+    background-color: var(--white);
+    /* Background color of the hovered li */
+    border-top-left-radius: 80px;
+    /* Add rounded top-left corner */
+    border-top-right-radius: 80px;
+    /* Add rounded top-right corner */
+}
+
+.navbar ul li a:hover .icon {
+    filter: invert(65%) sepia(80%) saturate(650%) hue-rotate(331deg) brightness(130%) contrast(75%);
+    /* Invert icon color on hover */
+}
+
+.navbar ul li:hover a {
+    position: relative;
+    z-index: 1;
+    /* Ensures that the anchor text and icon stay above the hover background */
+    color: var(--red);
+}
+
+.navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    /* Apply rounded corners to the hover background */
+    border-top-right-radius: 80px;
+    z-index: -1;
+    /* Ensure the background is behind the content */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Shadow effect on the white background */
+
+}
+.navbar ul li.active {
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.navbar ul li.active a {
+    color: var(--red);
+}
+
+.navbar ul li.active .icon {
+    filter: invert(1);
+}
+
+/* Optional: To make the active background transition smoothly */
+.navbar ul li.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.backbtn img {
+    width: 48px;
+}
+
+.smalloutline {
+    padding: 8px 0px;
+}
+
+.smalloutline button {
+    font-size: var(--caption);
+    color: var(--red);
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    border-radius: var(--value4);
+    border: 1px solid var(--red);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.filter {
+    padding: 8px 0px;
+}
+
+.greenbtn {
+    font-size: var(--caption);
+    font-weight: bold;
+    color: var(--white);
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    border-radius: var(--value4);
+    border: none;
+    background-color: var(--green);
+}
+
+.bluebtn {
+    font-size: var(--caption);
+    font-weight: bold;
+    color: var(--white);
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    border-radius: var(--value4);
+    border: none;
+    background-color: var(--blue);
+}
+
+.yellowbtn {
+    font-size: var(--caption);
+    font-weight: bold;
+    color: var(--white);
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    border-radius: var(--value4);
+    border: none;
+    background-color: var(--yellow);
+}
+
+.redbtn {
+    font-size: var(--caption);
+    font-weight: bold;
+    color: var(--white);
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    border-radius: var(--value4);
+    border: none;
+    background-color: var(--red);
+}
+
+.contactinfo {
+    display: flex;
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Centers items vertically */
+    gap: var(--value2);
+    /* Space between whatsapp and email sections */
+    margin: auto;
+    /* Centers the entire .contactinfo container */
+}
+
+.whatsapp,
+.email {
+    width: 144px;
+    padding: var(--value2);
+    text-align: center;
+    border-radius: var(--value3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp {
+    background-color: var(--green);
+}
+
+.email {
+    background-color: var(--blue);
+}
+
+.text {
+    text-align: left;
+}
+
+.whatsapp img,
+.email img {
+    width: 64px;
+    padding: 4px;
+}
+
+.whatsapp p,
+.email p {
+    font-size: var(--caption);
+    color: var(--white);
+}
+
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: var(--value2);
+    /* Adds space between insta and web sections */
+    margin: var(--value3);
+}
+
+.insta,
+.web {
+    border: 2px solid var(--yellow);
+    padding: var(--value2);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centers icon and text vertically */
+    width: 100%;
+    /* Full width of the container */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    /* Ensures icon and text are aligned */
+    gap: var(--value1);
+    /* Space between icon and text */
+}
+
+.info img {
+    width: 24px;
+    /* Adjust icon size as needed */
+    height: 24px;
+}

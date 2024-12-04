@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <div class="background">
+        <div class="header-back">
+            <div class="backbtn">
+                <img src="ICONS/BACK KIRI.svg" alt="">
+            </div>
+            <div class="pagename">
+                <h2 class="h2w">Connecting you with the perfect expert...</h2>
+            </div>
+        </div>
+        
+
+        <div class="pagecontent-whatsapp">
+            <div class="textcontent">
+                <img class="search-img" src="ASSETS/Search.svg">
+            </div>
+
+            <p class="captionm">Please wait while we find an expert for your registration guidances</p>
+
+    <!-- Loading bar -->
+    <div class="loading-container">
+        <div class="loading-bar" id="loading-bar"></div>
+    </div>
+
+    <img class="mascot-bottom" src="ASSETS/mascot group.svg" alt="Mascot">
+    
+    
+    <div class="popup-box" id="popup-box">
+        <p class="bodytext">Magodang App would like to open WhatsApp.</p>
+        <div class="popup-buttons">
+            <a href="home.html"><button class="btn btn-green" id="btn-ok">Ok</button> </a>
+            <a href="programs.html"><button class="btn btn-white" id="btn-cancel">Cancel</button></a>
+        </div>   
+        </div>
+    </div>
+
+
+
+    <script>
+// Simulate loading progress
+const loadingBar = document.getElementById("loading-bar");
+const popupBox = document.getElementById("popup-box");
+const btnOk = document.getElementById("btn-ok");
+const btnCancel = document.getElementById("btn-cancel");
+
+let progress = 0;
+
+const loadInterval = setInterval(() => {
+    if (progress >= 100) {
+        clearInterval(loadInterval);
+        showPopup(); // Show the popup when loading is complete
+    } else {
+        progress += 1; // Increase progress
+        loadingBar.style.width = progress + "%";
+    }
+}, 50); // Adjust speed (50ms per update)
+
+// Function to show the popup
+function showPopup() {
+    popupBox.style.display = "block";
+}
+
+// // Button click event listeners
+// btnOk.addEventListener("click", () => {
+//     alert("Opening WhatsApp..."); // Replace this with actual WhatsApp functionality if needed
+//     popupBox.style.display = "none";
+// });
+
+// btnCancel.addEventListener("click", () => {
+//     popupBox.style.display = "none"; // Hide popup
+// });
+
+    </script>
+
+    
+
+
+    
+</body>
+
+</html>

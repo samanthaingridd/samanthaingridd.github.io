@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="backsign">
+            <a href="programs.html"> <img src="ASSETS/BACK KIRI.svg"> </a>
+        </div>
+
+        <div class="logo">
+            <img src="FOTO/logo.svg" alt="Logo">
+        </div>
+        <h1 class="h1m">Sign Up</h1>
+
+        <form action="#" id="sign-in-form">
+            <div class="field fname-field">
+                <div class="input-field">
+                    <input type="text" placeholder="First Name" class="fname">
+                </div>
+                <span class="error fname error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter your first name.</p>
+                </span>
+            </div>
+            <div class="field lname-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Last Name" class="lname">
+                </div>
+                <span class="error lname error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter your last name.</p>
+                </span>
+            </div>
+
+            <div class="field city-field">
+                <div class="input-field">
+                    <input type="text" placeholder="City" class="city">
+                </div>
+                <span class="error city error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter your city.</p>
+                </span>
+            </div>
+
+            <div class="field institution-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Institution" class="institution">
+                </div>
+                <span class="error institution error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter your institution.</p>
+                </span>
+            </div>
+
+            <div class="field email-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" class="email">
+                </div>
+                <span class="error email error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter a valid email, like name@email.com.</p>
+                </span>
+            </div>
+        
+            <div class="field phone-field">
+                <div class="input-field">
+                    <input type="text" placeholder="Phone Number" class="phone">
+                </div>
+                <span class="error phone error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Please enter a valid phone number.</p>
+                </span>
+            </div>
+            <div class="field">
+                <div class="input-field create-password">
+                    <input type="password" placeholder="Create Password" class="password">
+                    <img src="ICON/hide.svg" alt="Toggle visibility icon" class="hidepass" id="toggle-password"/>
+                </div>
+                <span class="error password error" style="display: none;">
+                    <img src="ICON/error.svg" alt="Error icon" />
+                    <p class="error-text">Password must be at least 8 characters long.</p>
+                </span>
+            </div>
+
+            <div class="button">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+
+        <div class="option">
+            <p class="caption"> Or sign in with </p>
+            <div class="socialmedia">
+                <img src="ICON/applelogo.svg" alt="Apple">
+                <img src="ICON/Google.svg" alt="Google">
+            </div>
+            <p class="caption"> Already have an account?
+                <a href="sign in.html"><span>Sign in</span></a>
+            </p>
+        </div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>

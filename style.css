@@ -1,0 +1,1806 @@
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome {
+    background: url(IMAGES/begron.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.background {
+    background-color: var(--red);
+    height: 100%;
+}
+
+.header-maya {
+    display: flex;
+    align-items: center;
+    gap: var(--value1);
+    padding: var(--value3) var(--value2);
+}
+
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.pagecontent {
+    margin-top: var(--value1);
+    height: 100vh;
+    padding: var(--value4) var(--value3);
+    border-radius: var(--value4) var(--value4) 0 0;
+    background-color: var(--white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.pagebadge {
+    margin-top: var(--value1);
+    height: 100vh;
+    padding: var(--value6) var(--value3);
+    border-radius: var(--value4) var(--value4) 0 0;
+    background-color: var(--yellow);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.pagebadge img {
+    width: 176px;
+    height: 176px;
+}
+
+.pagebadge h1 {
+    font-size: var(--heading1);
+    color: var(--maroon);
+}
+
+.pagebadge p {
+    font-size: var(--body);
+    color: var(--maroon);
+}
+
+h3 {
+    font-size: var(--heading3);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.contactinfo {
+    display: flex;
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Centers items vertically */
+    gap: var(--value4);
+    /* Space between whatsapp and email sections */
+    padding-top: var(--value2);
+}
+
+.whatsapp,
+.email {
+    width: 144px;
+    padding: var(--value2);
+    text-align: center;
+    border-radius: var(--value3);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp {
+    background-color: var(--green);
+}
+
+.email {
+    background-color: var(--blue);
+}
+
+.text {
+    text-align: center;
+}
+
+.whatsapp img,
+.email img {
+    width: 64px;
+    padding: 4px;
+}
+
+.whatsapp p,
+.email p {
+    font-size: var(--caption);
+    color: var(--white);
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: var(--value2);
+    /* Adds space between insta and web sections */
+    margin-top: var(--value3);
+}
+
+.insta,
+.web {
+    border: 2px solid var(--yellow);
+    padding: var(--value2);
+    border-radius: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Centers icon and text vertically */
+    width: 100%;
+    /* Full width of the container */
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    /* Ensures icon and text are aligned */
+    gap: var(--value1);
+    /* Space between icon and text */
+}
+
+.info img {
+    width: 24px;
+    /* Adjust icon size as needed */
+    height: 24px;
+}
+
+.textcontent {
+    text-align: justify;
+}
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+    padding-bottom: var(--value1);
+}
+
+.illustration {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+.btns {
+    position: fixed; /* Fixes the buttons to the screen */
+    top: 20px; /* Positions the container 20px from the top of the screen */
+    left: 0; /* Aligns the container to the left edge of the screen */
+    right: 0; /* Aligns the container to the right edge of the screen */
+    display: flex;
+    justify-content: space-between; /* Distributes space between the buttons */
+    padding: 0 20px; /* Adds padding from the sides of the screen */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    z-index: 1000; /* Ensures the container is above other elements */
+}
+
+.backbtn, .bookmark {
+    display: flex;
+    align-items: center; /* Vertically centers the button content */
+    justify-content: center; /* Centers the button content horizontally */
+}
+
+.cover {
+    height: 312px; /* Set the height of the container */
+    border-radius: 0 0 var(--value2) var(--value2); /* Round the corners of the container */
+    overflow: hidden; /* Ensures that anything outside the rounded corners is hidden */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adds shadow for effect */
+}
+
+.cover img {
+    width: 100%; /* Ensures the image covers the width of the container */
+    height: 100%; /* Makes the image fill the container's height */
+    object-fit: cover; /* Ensures the image retains its aspect ratio and fills the container */
+}
+
+.title {
+    position: relative; /* Position the title absolutely within the cover */
+    bottom: 48px; /* Distance from the bottom of the container */
+    left: 24px; /* Distance from the left of the container */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: adds shadow to make the text stand out */
+}
+
+.textprograms {
+    text-align: justify;
+    padding: var(--value4) var(--value3);
+}
+
+.schedule {
+    padding-top: var(--value2);
+}
+
+.location,
+.time,
+.speaker {
+    display: flex;
+    align-items: center;
+    gap: var(--value1);
+    padding-bottom: var(--value1);
+}
+
+.regist {
+    padding-top: var(--value2);
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.regist a {
+    font-size: var(--caption);
+    text-decoration: none;
+    color: var(--maroon);
+    margin-top: var(--value1);
+}
+
+.regist button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-weight: bold;
+    background-color: var(--green);
+    border: none;
+    color: var(--white);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.logo img {
+    width: 80%;
+}
+
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    font-weight: bold;
+    line-height: var(--value4);
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--maroon);
+    font-weight: bold;
+}
+
+.whoareyou {
+    text-align: center;
+    padding: var(--value8) var(--value3);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.option {
+    display: flex; /* Keep buttons in their natural size */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: var(--value2); /* Space between buttons */
+    align-items: center; /* Center align the buttons */
+    margin-top: var(--value4);
+}
+
+.option button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-weight: bold;
+    border: none;
+    width: 50vw;
+    color: var(--white);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: var(--red); /* Example color, replace as needed */
+}
+
+.pages {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: var(--value2) var(--value3);
+}
+
+.pfp {
+    display: grid;
+    grid-template-columns: repeat(2, 120px); /* Two columns with a fixed width of 120px each */
+    gap: var(--value5); /* Space between images */
+    justify-content: center; /* Centers the entire grid horizontally */
+    align-items: center;
+    justify-items: center;
+}
+
+.pfp img {
+    width: 128px; /* Sets each image to 120px wide */
+    height: auto; /* Maintains the image aspect ratio */
+}
+
+.pages2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--red);
+    position: fixed;
+    bottom: 0;
+    padding: var(--value2) var(--value3);
+    border-radius: var(--value4) var(--value4) 0 0;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Make the Welcome container take the full viewport height */
+}
+
+.headerback {
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    padding: var(--value2);
+    gap: var(--value1);
+}
+
+.header{
+    background-color: var(--red);
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+
+}
+/* .header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 16px;
+} */
+
+.profile-icon {
+    right: 0;
+    /* padding-left: 132px; */
+    height: 32px; /* Ensure consistent size if needed */
+    width: 32px; /* Ensure consistent size if needed */
+
+}
+
+.progress {
+    justify-items: center;
+}
+
+.progressbar {
+    background-color: #F4F4F4;
+    margin: var(--value3);
+    padding: var(--value4);
+    width: 85%;
+    justify-items: center;
+    border-radius: var(--value2);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+}
+
+.progressbar img {
+    padding: var(--value2);
+}
+
+.progressbar h3 {
+    padding-top: var(--value2);
+    font-size: var(--heading3);
+    color: var(--maroon);
+}
+
+.progressbar p{
+    font-size: var(--caption);
+    color: var(--maroon);
+}
+
+.score {
+    display: flex; /* Align children horizontally */
+    justify-content: center; /* Center horizontally within the parent */
+    margin-top: var(--value3);
+}
+
+.badge, .points {
+    display: flex; /* Use flexbox for vertical stacking */
+    flex-direction: column; /* Stack the number and image vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Align text in the center */
+}
+
+.badge p, .points p {
+    margin: 0; /* Remove extra spacing caused by default margins */
+    font-size: var(--body); /* Ensure consistent font size */
+    color: var(--maroon);
+}
+
+.badge img, .points img {
+    width: var(--value8); /* Set consistent size for images */
+    height: var(--value8);
+}
+
+.badges {
+    margin: var(--value4);
+}
+
+.badges h3 {
+    font-size: var(--heading3);
+    color: var(--maroon);
+}
+
+.badgeicons {
+    margin-top: var(--value3);
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 equal-width columns */
+    gap: 16px; /* Adjust spacing between rows and columns */
+    justify-items: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+#bookmarkButton {
+    width: 32px; /* Adjust the size of the like icon */
+    height: 32px;
+    /* margin-bottom: 8px; Space between the icon and the caption */
+    cursor: pointer; /* Change cursor to indicate clickable */
+}
+
+.navbar {
+    background-color: var(--red);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 40px -20px rgba(0, 0, 0, 1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 8px 0px 8px;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* Ensures each item takes up equal space */
+    padding: 8px;
+    position: relative;
+    /* Set to relative for proper positioning of the hover background */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: var(--caption);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ensures anchor element fills the navbar height */
+    position: relative;
+    /* Keep the positioning relative to the li */
+}
+
+.navbar ul li a .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    /* Space between icon and text */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar ul li.active {
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.navbar ul li.active a {
+    color: var(--red);
+}
+
+.navbar ul li.active .icon {
+    filter: invert(65%) sepia(80%) saturate(650%) hue-rotate(331deg) brightness(130%) contrast(75%);
+}
+
+/* Optional: To make the active background transition smoothly */
+.navbar ul li.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure full width is used */
+    height: 100%; /* Ensure full height is used */
+    overflow: hidden;
+    overflow-y: auto;
+
+
+}
+
+/* ---------------------------------------------------------------- */
+/* TEXT STYLE */
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    ${var(--bold)};
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1w {
+    font-size: var(--heading1);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h3{
+    font-size: var(--heading3);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextbw {
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtext{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtextw{
+    font-size: var(--subtext);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtextm{
+    font-size: var(--subtext);
+    color: var(--maroon);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtextb{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.captionm{
+    font-size: var(--caption);
+    color: var(--maroon); 
+    font-family: 'Montserrat', sans-serif;
+}
+.captionw{
+    font-size: var(--caption);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif; 
+}
+.captionbr{
+    font-size: var(--caption);
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* ---------------------------------------------------------------- */
+/* ELEMENTS */
+
+/* BUTTONS */
+button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------------------- */
+
+/* CARD */
+.card-register {
+    width: 148px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.card-register p {
+    margin-top: var(--value2);
+    margin-bottom: var(--value2);
+    color: var(--white);
+}
+
+.card {
+    width: 156px;
+    height: 190px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    /* margin: var(--value2); */
+}
+
+.card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.card .cardcontent {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.card p {
+    margin: 0px; 
+    margin-bottom: 8px;
+}
+
+.cardblue {
+    background-color: var(--blue);
+}
+
+.cardgreen {
+    background-color: var(--green);
+}
+
+
+
+/*ARTICLE CARD*/
+.article{
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically (if required) */
+    padding: var(--value2); /* Optional padding */
+    padding-top: 0px;
+    padding-bottom: 88px;
+}
+
+.article a {
+    text-decoration: none;
+}
+
+
+.article-card {
+    width: 320PX;
+    height: 180px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    margin: var(--value2);
+    margin-top: 0px;
+}
+
+.article-card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.article-card .cardcontent {
+    padding: 10px;
+    z-index: 1;
+}
+
+.article-card p {
+    margin: 0px; 
+    margin-bottom: 8px;
+    color: var(--white);
+
+}
+
+/* ---------------------------------------------------------------- */
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 311px;
+    
+    
+}
+
+.dropdown-btn {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: var(--value2);
+    font-size: var(--body);
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+}
+
+.dropdown-btn::after {
+    content: '▼';
+    float: right;
+    margin-left: var(--value1);
+}
+
+.dropdown-btn::after {
+    content: '▼';
+    position: absolute;
+    right: var(--value2);
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.dropdown-btn.active::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--maroon);
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: var(--value1);
+    margin-top: var(--value1);
+    z-index: 1;
+    overflow: hidden; /* Ensures border radius stays intact on hover */
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: var(--value2);
+    font-size: var(--body);
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--red);
+}
+
+.show {
+    display: block;
+}
+
+
+/* TOGGLE */
+.toggle-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: 10px 0;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #5ACD90;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+
+
+/* PAGE CONTENTS */
+/* 2. LANGUAGE PAGE */
+.language {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.language-heading {
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: var(--value2) var(--value3);
+    max-width: 83%;
+    align-items: center;
+}
+
+.pfp {
+    display: grid;
+    grid-template-columns: repeat(2, 156px);
+    gap: var(--value1); /* Space between images */
+    justify-content: center; /* Centers the entire grid horizontally */
+    margin: var(--value2), auto;
+}
+
+.pfp img {
+    width: 120px; /* Sets each image to 120px wide */
+    height: auto; /* Maintains the image aspect ratio */
+}
+
+
+/* 7. SELECT COMPETITION INTEREST */
+.select-competition-content {
+    text-align: center;
+    padding: var(--value8) var(--value3);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.select-competition-content a {
+    text-decoration: none;
+}
+
+.select-competition {
+    display: grid;
+    grid-template-columns: repeat(2, 148px);
+    gap: var(--value1); /* Space between images */
+    justify-content: center; /* Centers the entire grid horizontally */
+    /* margin: var(--value2), auto; */
+}
+
+
+.others button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-weight: bold;
+    background-color: var(--white);
+    border-style: solid;
+    border: 2px solid var(--red);
+    color: var(--red);
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: var(--value3);
+}
+
+
+/* HOME */
+.home-content a {
+    text-decoration: none;
+}
+
+.home-header .subtextw {
+    margin: 0px;
+}
+
+.home-header .h1w {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    line-height: var(--value4);
+}
+
+.home-header .profile-icon {
+    position: absolute; /* Position relative to the .home-header-nav */
+    top: 0; /* Align with the top of the .h1w */
+    right: 0; /* Align to the right */
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+}
+
+
+.home-header-nav img{
+    padding-right: var(--value1);
+}
+
+.home-header {
+    gap: var(--value1);
+    padding-top: var(--value1);
+    background-color: var(--red);
+    padding: var(--value3);
+    position: relative; /* Ensure children with position:absolute align to this container */
+}
+
+.home-header-nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    gap: 8px; /* Spacing between items */
+    position: relative; /* Allows precise positioning of the profile icon */
+}
+
+.home-mascot {
+    position: absolute;
+    left: 189px;
+    top: 72px;
+}
+
+.home-mascot-dangs {
+    position: absolute;
+    left: 189px;
+    top: 104px;
+}
+
+.seeall-button {
+    width: fit-content;
+    border: 2px solid var(--maroon);
+    background-color: var(--white);
+    color: var(--maroon);   
+    cursor: pointer;
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    margin-left: 0px;
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); */
+}
+
+.home-container-top-camp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--value2);
+    line-height: var(--value3);
+}
+
+
+.home-content {
+    padding: 0 var(--value1);
+    padding-bottom: var(--value3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    row-gap: var(--value2);
+    overflow-x: hidden;
+}
+
+.home-card {
+    width: 156px;
+    height: 192px;
+    border-radius: var(--value3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    /* margin: var(--value2); */
+}
+
+.home-card1 {
+    background-color: var(--green);
+    background-image: url('ASSETS/mascot-category1.svg');
+    background-position: left;
+    background-repeat: no-repeat;}
+
+.home-card2 {
+    background-color: var(--blue);
+    background-image: url('ASSETS/mascot-category2.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.home-card3 {
+    background-color: var(--yellow);
+    background-image: url('ASSETS/mascot-category3.svg');
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.home-card4 {
+    background-color: var(--red);
+    background-image: url('ASSETS/mascot-category4.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.home-card p {
+    text-align: center;
+    margin-top: 144px;
+}
+
+.card img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+
+.home-testimony {
+    padding-bottom: var(--value3);
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    /* padding: 16px; */
+    margin: auto;
+    padding-top: 0px;
+    /* width: fit-content; */
+}
+
+.home-container-programs {
+    padding-bottom: var(--value3);
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: var(--value2);
+    margin: auto;
+}
+
+
+.home-container-programs a {
+    text-decoration: none;
+}
+
+.home-card-programs {
+    flex: 0 0 auto; /* Prevent cards from shrinking and allow horizontal scrolling */
+    background-color: var(--green);
+    scroll-snap-align: start; /* Optional: align cards when scrolling */
+    height: 190px;
+}
+
+.home-card-programs p {
+    color: var(--white);
+}
+
+.home-card-blue {
+    background-color: var(--blue);
+    margin-bottom: var(--value8);
+}
+
+.main-content2 .h2m {
+    margin-bottom: var(--value2);
+    margin-top: var(--value2);
+}
+
+
+.home-card-testimony {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 250px;
+    height: 104px;
+    padding: var(--value2) 0px;
+    background-color: var(--white);
+    border-radius: 12px;
+    border: 2px solid var(--yellow);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    line-height: 16px;
+}
+
+.home-card-testimony img {
+    width: 60px; /* Set a fixed width for the image */
+    height: 60px; /* Set a fixed height for the image */
+    object-fit: cover;
+    margin-left: 10px; /* Add spacing between the image and card edge */
+    border-radius: 50%; /* Optional: make the image circular */
+}
+
+.home-card-testimony .testimony-content {
+    padding-left: 16px; /* Space between image and text */
+    display: flex;
+    flex-direction: column; /* Stack text vertically */
+    justify-content: center; /* Center-align the text */
+}
+
+.home-card-testimony p {
+    margin: 0; /* Remove extra margin */
+    color: var(--dark-gray); /* Adjust text color if needed */
+}
+
+
+
+/* PREFERENCES */
+.background {
+    background-color: var(--red);
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: var(--value1);
+    padding-top: var(--value1); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);    
+}
+
+.backbtn, .bookmark {
+    display: flex;
+    align-items: center; /* Vertically centers the button content */
+    justify-content: center; /* Centers the button content horizontally */
+}
+
+.pagecontent {
+    /* margin-top: var(--value1); */
+    height: 100vh;
+    padding: var(--value4) var(--value3);
+    border-radius: var(--value4) var(--value4) 0 0;
+    background-color: var(--white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.pagecontent p {
+    margin: 0px
+}
+
+.textcontent {
+    text-align: justify;
+}
+
+
+
+/* COMPETITION */
+
+.header-blue {
+    background-color: var(--blue);
+    background-image: url('ASSETS/mascot-header1.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+.container {
+    position: relative;
+    text-align: left;
+}
+
+.main-content {
+    flex: 1; 
+    padding: var(--value3);
+}
+
+.main-content p {
+    margin: 0px;
+}
+
+.header{
+    background-color: var(--red);
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.header-nav img{
+    padding-right: var(--value1);
+}
+
+.profile{
+    margin-top: var(--value2);
+    text-align: center;
+}
+
+
+.container-programs {
+    padding: 0 var(--value3);
+    padding-bottom: 104px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    row-gap: var(--value2);
+    overflow-x: hidden;
+    
+}
+
+.container-programs a {
+    text-decoration: none;
+}
+
+.search {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    margin-left: var(--value2);
+    margin-right: var(--value2);
+}
+
+.search input {
+    max-width: 800px;
+    width: 100%;
+    background-color: #F6F5FA;
+    margin-top: 0px;
+    padding: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    font-size: var(--caption);
+    outline: none;
+    border: 1px solid #808080; 
+    border-radius: var(--value5); 
+    z-index: 1;
+}
+
+.search input:focus{
+    border-color: var(--black);
+}
+.search .error {
+    display: none;
+    color: var(--red);
+    font-size: var(--subtext);
+    margin-top: var(--value1);
+}
+
+.search .error-text {
+    display: inline;
+}
+.save-changes {
+    margin-top: var(--value4);
+    text-align: center;
+    padding-bottom: var(--value3);
+ 
+}
+.save-changes button{
+    width: fit-content;
+    background-color: var(--green);
+    border: none;
+    border-radius: var(--value5);
+    cursor: pointer;
+}
+
+.main-content2 {
+    flex: 1; 
+    padding: var(--value2);  
+}
+
+
+
+.category-button {
+    display: block;
+    margin: auto;
+    overflow: auto;
+    white-space: nowrap;
+    padding-left: var(--value2);
+    padding-right: var(--value1);
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.category-button button {
+    width: fit-content;
+    border: none;
+    color: var(--white);   
+    cursor: pointer;
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value2);
+    padding-right: var(--value2);
+    margin-right: var(--value1);
+    margin-left: 0px;
+    margin-bottom: var(--value2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.category-button button.greyed-out {
+    background-color: #d3d3d3 !important; /* Grey color overrides */
+    color: #888;
+}
+
+
+
+
+
+.math-button {
+    background-color: var(--red);
+}
+.science-button {
+    background-color: var(--green);
+}
+
+.language-button {
+    background-color: var(--blue);
+}
+
+.arts-button {
+    background-color: var(--yellow);
+}
+
+.search {
+    margin-top: 0px;
+}
+
+
+/* CAMP */
+.header-green {
+    background-color: var(--green);
+    background-image: url('ASSETS/mascot-header2.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
+}
+
+/* COUNCELING */
+.header-red {
+    background-color: var(--red);
+    background-image: url('ASSETS/mascot-header3.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* COACHING */
+.header-yellow {
+    background-color: var(--yellow);
+    background-image: url('ASSETS/mascot-header4.svg');
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 0 0 var(--value2) var(--value2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--value2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+/* PROGRAMS */
+/* .profile-icon {
+    margin-left: auto;
+    padding-left: 110px;
+    height: 32px;
+    width: 32px;
+
+} */
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--red);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 40px -20px rgba(0, 0, 0, 1);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 4px 8px 0px 8px;
+    margin: 0;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    /* Ensures each item takes up equal space */
+    padding: 8px;
+    position: relative;
+    /* Set to relative for proper positioning of the hover background */
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: var(--caption);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ensures anchor element fills the navbar height */
+    position: relative;
+    /* Keep the positioning relative to the li */
+}
+
+.navbar ul li a .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+    /* Space between icon and text */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar ul li.active {
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+}
+
+.navbar ul li.active a {
+    color: var(--red);
+}
+
+.navbar ul li.active .icon {
+    filter: invert(65%) sepia(80%) saturate(650%) hue-rotate(331deg) brightness(130%) contrast(75%);
+}
+
+/* Optional: To make the active background transition smoothly */
+.navbar ul li.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 80px;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar ul li a img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+/* CONNECTING */
+
+.header-back {
+    display: flex;
+    align-items: center;
+    gap: var(--value1);
+    padding-top: var(--value3); 
+    padding-bottom: var(--value3);
+    padding-left: var(--value2);
+    top: 0;
+    z-index: 1000;
+}
+
+.pagecontent-whatsapp {
+    height: 100vh;
+    border-radius: var(--value4) var(--value4) 0 0;
+    background-color: var(--white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Center the search image */
+.search-img {
+    padding-top: var(--value8);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Make mascot-bottom span full width */
+.mascot-bottom {
+    width: 100vw;
+    height: auto;
+}
+
+/* Loading bar styles */
+.loading-container {
+    width: 80%; /* Adjust as needed */
+    height: 10px;
+    margin: 20px auto;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.loading-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--blue);
+    transition: width 0.1s ease-in-out;
+}
+
+/* Popup box styles */
+.popup-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: var(--value1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: none; /* Hidden by default */
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-box p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Buttons inside the popup */
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-green {
+    /* width: fit-content; */
+    border: none;
+    color: var(--white);   
+    cursor: pointer;
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value5);
+    padding-right: var(--value5);
+    margin: var(--value1);
+    margin-left: 0px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    background-color: var(--green);
+    border-radius: var(--value4);
+
+}
+
+.btn-white {
+    width: fit-content;
+    border: none;
+    color: var(--green);   
+    cursor: pointer;
+    padding-top: var(--value1);
+    padding-bottom: var(--value1);
+    padding-left: var(--value3);
+    padding-right: var(--value3);
+    margin: var(--value1);
+    margin-left: 0px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--green);
+    border-radius: var(--value4);
+    background-color: var(--white);
+}
+
+

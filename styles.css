@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure full width is used */
+    height: 100%; /* Ensure full height is used */
+    /* overflow: hidden; */
+}
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+/* BUTTONS */
+button {
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* TEXT STYLE */
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1w {
+    font-size: var(--heading1);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+    font-size: var(--heading3);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextbw {
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtext{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+
+}
+.subtextb{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.captionm{
+    font-size: var(--caption);
+    color: var(--maroon); 
+    font-family: 'Montserrat', sans-serif;
+}
+.captionw{
+    font-size: var(--caption);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif; 
+}
+.captionbr{
+    font-size: var(--caption);
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container */
+.container {
+    position: relative;
+    text-align: left;
+    background-color: var(--white);
+    padding-top: var(--value2);
+    padding-bottom: var(--value3);
+    margin: var(--value3); 
+
+}
+
+/* Form */
+.container form {
+    margin-top: var(--value2);
+}
+
+form .field{
+    margin-bottom: var(--value2);
+}
+form .input-field{
+    position: relative;
+    height: 55px;
+    width: 100%;
+
+}
+
+.input-field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border:none;
+    border-radius: var(--value5);
+    padding: 0 var(--value2);
+    border: 1px solid #808080;
+}
+.input-field :focus{
+    border-color: var(--maroon);
+}
+.input-field.invalid input {
+    border-color: var(--red);
+}
+
+
+.error{
+    font-size: var(--caption);
+    display: flex;
+    align-items: center;
+    margin-top: var(--value1);
+    color:var(--red);
+    display: none;
+}
+
+.invalid .error{
+    display: flex;
+}
+
+.error img{
+    margin-right: var(--value1);
+}
+
+.input-field.create-password {
+    position: relative;         /* Set position relative to contain the absolute positioning of the icon */
+}
+.input-field.create-password img {
+    position: absolute;         /* Position the icon absolutely */
+    right: 18px;               /* Position it on the right side */
+    top: 50%;                  /* Center it vertically */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    cursor: pointer;           /* Change cursor to pointer for better UX */
+    width: 20px;               /* Set a width for the icon */
+    height: 20px;              /* Set a height for the icon */
+}
+
+.button{
+    margin-top: var(--value4);
+    text-align: center;
+}
+
+.button input{
+    width: fit-content;
+    background-color: var(--green);
+    border: none;
+    border-radius: var(--value5);
+    cursor: pointer;
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* .field {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.field input {
+    width: 100%;
+    background-color: #F6F5FA;
+    margin-top: var(--value2);
+    padding: var(--value2);
+    font-size: var(--body);
+    outline: none;
+    border: 1px solid #808080; 
+    border-radius: var(--value5); 
+}
+.field input:focus{
+    border-color: var(--black);
+}
+.field .error {
+    display: none;
+    color: var(--red);
+    font-size: var(--subtext);
+    margin-top: var(--value1);
+}
+
+.field .error-text {
+    display: inline;
+} */
+.option {
+    margin-top: var(--value4);
+    text-align: center;
+ 
+}
+/* .button-caption-container button{
+    width: fit-content;
+    background-color: var(--green);
+    border: none;
+    border-radius: var(--value5);
+    cursor: pointer;
+
+} */
+/* .button-caption-container button:hover{
+    
+    background-color: #4fd68f;
+
+} */
+.option p{
+    margin: var(--value2);
+    text-align: center;
+}
+.forgot {
+    margin-top: var(--value1);
+    color: #808080;
+    cursor: pointer;
+    text-align: left;
+  }
+  .forgot a {
+    color: #808080; /* Changes link color to maroon */
+    text-decoration: none; /* Removes underline */
+}
+.option p span{
+    color: var(--blue);
+    font-weight: bold;
+}
+.caption a {
+
+    text-decoration: none;
+}
+.mascots{
+    margin-top: 16px;
+}
+.logo{
+    margin-bottom: var(--value5);
+    text-align: center;
+}
+.logo img{
+    width: 45%;
+}
+.canvas {
+    display: block;
+    margin: auto;
+}
+/* .error {
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+} */
+
+
+.backsign {
+    top: 0;
+}

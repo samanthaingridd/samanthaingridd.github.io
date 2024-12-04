@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Select competition</title>
+</head>
+
+<body>
+    <div class="select-competition-content">
+        <p class="h2m" style="margin-top: 0px;">What are you <br>interested in?</p>
+        <br>
+
+            <div class="select-competition">
+                <div class="card-register" style="background-color: #EF6352;">
+                    <img src="ASSETS/Images/math.svg" alt="Microphone">
+                    <div class="cardcontent">
+                        <p class="bodytextb">Mathematics</p>
+                    </div>
+                </div>
+
+            <div class="card-register" style="background-color: #5ACD90;">
+                <img src="ASSETS/Images/science.svg" alt="Microphone">
+                <div class="cardcontent">
+                    <p class="bodytextb">Science</p>
+                </div>
+            </div>
+
+            <div class="card-register" style="background-color:#40A6D7;">
+                <img src="ASSETS/Images/language.svg">
+                <div class="cardcontent">
+                    <p class="bodytextb">Language and Literature</p>
+                </div>
+            </div>
+
+            <div class="card-register" style="background-color: #fac05e;">
+                <img src="ASSETS/Images/humanities.svg">
+                <div class="cardcontent">
+                    <p class="bodytextb">Art and Humanities</p>
+                </div>
+            </div>
+    </div>
+
+    <div class="others" style="margin-top: 8px; color: #EF6352;">
+        <button>Others</button>
+    </div>
+
+    </div>
+
+    <div class="pages2">
+        <a href="city.html"> <img src="ASSETS/BACK KIRI.svg" alt=""> </a>
+        <img src="ASSETS/pagination6.svg" alt="">
+        <a href="learningbuddy.html"> <img src="ASSETS/BACK KANAN.svg" alt=""> </a>
+    </div>
+
+    <script>
+        // Select all cards and the "Others" button
+       const cards = document.querySelectorAll('.card-register');
+       const othersButton = document.querySelector('.others button');
+       
+       // Function to toggle the selected state
+       function toggleSelection(element) {
+           if (element.classList.contains('selected')) {
+               // If already selected, deselect it
+               element.classList.remove('selected');
+               element.style.opacity = '1'; // Reset opacity
+           } else {
+               // If not selected, select it
+               element.classList.add('selected');
+               element.style.opacity = '0.5'; // Lower opacity
+           }
+       }
+       
+       // Add click event listeners to each card
+       cards.forEach(card => {
+           card.addEventListener('click', () => toggleSelection(card));
+       });
+       
+       // Add click event listener to the "Others" button
+       othersButton.addEventListener('click', () => toggleSelection(othersButton));
+       
+           </script>
+</body>
+
+</html>
