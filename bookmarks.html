@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-nav">
+                
+                <a href="profile.html"> <img src="ASSETS/BACK KIRI.svg"> </a>
+                <h2 class="h2w"> Bookmarks</h2>
+            </div>
+        </div>
+        
+    <div class="main-content2">
+
+        <form id="form" action="#">
+        <div class="search">
+                <input type="text" id="fname" name="fname" placeholder="What do you want to search for today?">
+        </div>
+
+        </form>
+
+    </div>
+
+        <div class="category-button">
+            <button class="science-button" type="submit" form="form"> Camp </button>
+            <button class="language-button" type="submit" form="form"> Competition </button>
+            <button class="arts-button" type="submit" form="form"> Coaching </button>
+            <button class="math-button" type="submit" form="form"> Counceling </button>
+        </div>
+
+
+    <div class="container-programs">
+
+        <div class="card">
+            <img src="ASSETS/Images/art.jpg">
+            <div class="cardcontent">
+                <p class="bodytextb" >Exploring Creative Arts...</p>
+                <p class="captionm">Get ready to unleash your creativity!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ASSETS/Images/exam.jpg">
+            <div class="cardcontent">
+                <p class="bodytextb" >Ace Your Exams with...</p>
+                <p class="captionm">Test-taking strategies and how to study effectively.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ASSETS/Images/leadership2.jpg">
+            <div class="cardcontent">
+                <p class="bodytextb" >Leadership Skills Camp</p>
+                <p class="captionm">Empowers kids to hone their leadership skills.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ASSETS/Images/essay.jpg">
+            <div class="cardcontent">
+                <p class="bodytextb" >Essay Writing</p>
+                <p class="captionm">Unleash your creativity and share your unique ideas with us!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="ASSETS/Images/mathscience.jpg">
+            <div class="cardcontent">
+                <p class="bodytextb" >Mathematics, Science, & Tech</p>
+                <p class="captionm">Dive into the world of innovation and discovery!</p>
+            </div>
+        </div>
+
+        
+
+
+    </div>
+
+
+<div class="navbar">
+    <ul>
+        <li>
+            <a href="#">
+                <div class="icon">
+                    <img src="ASSETS/HOME.svg" alt="">
+                </div>
+                <div class="name">Home</div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon">
+                    <img src="ASSETS/PROGRAMS.svg" alt="">
+                </div>
+                <div class="name">Programs</div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon">
+                    <img src="ASSETS/ARTICLES.svg" alt="">
+                </div>
+                <div class="name">Articles</div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon">
+                    <img src="ASSETS/PROGRESS.svg" alt="">
+                </div>
+                <div class="name">Progress</div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <div class="icon">
+                    <img src="ASSETS/CONTACT.svg" alt="">
+                </div>
+                <div class="name">Contact</div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<script>
+    // Select all category buttons
+    const categoryButtons = document.querySelectorAll('.category-button button');
+    
+    // Add event listeners to each button
+    categoryButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Check if this button is already active
+            if (button.classList.contains('active')) {
+                // If active, reset all buttons to normal
+                categoryButtons.forEach((btn) => {
+                    btn.classList.remove('greyed-out', 'active');
+                });
+            } else {
+                // Otherwise, set this button as active and grey out others
+                categoryButtons.forEach((btn) => {
+                    if (btn !== button) {
+                        btn.classList.add('greyed-out');
+                        btn.classList.remove('active');
+                    } else {
+                        btn.classList.add('active');
+                        btn.classList.remove('greyed-out');
+                    }
+                });
+            }
+        });
+    });
+    
+    </script>
+       
+</body>
+</html>

@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ensure full width is used */
+    height: 100%; /* Ensure full height is used */
+    overflow-x: hidden;
+}
+:root {
+    /* COLOR PALETTE */
+    --white: #FFFFFF;
+    --red: #EF6352;
+    --blue: #40A6D7;
+    --green: #5ACD90;
+    --yellow: #fac05e;
+    --maroon: #610c21;
+    --black: #000000;
+
+    /* FONT SIZE */
+    --heading1: 32px;
+    --heading2: 24px;
+    --heading3: 20px;
+    --body: 16px;
+    --subtext: 14px;
+    --caption: 10px;
+
+    /* MARGIN, PADDING, SPACING, AND LAYOUT */
+    --value1: 8px;
+    --value2: 16px;
+    --value3: 24px;
+    --value4: 32px;
+    --value5: 40px;
+    --value6: 48px;
+    --value7: 56px;
+    --value8: 64px;
+}
+
+button {
+    width: fit-content;
+    padding-top: var(--value2);
+    padding-bottom: var(--value2);
+    padding-left: var(--value4);
+    padding-right: var(--value4);
+    border-radius: var(--value4);
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* TEXT STYLE */
+.h1m {
+    font-size: var(--heading1);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h1w {
+    font-size: var(--heading1);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2m {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.h2w {
+    font-size: var(--heading2);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.h3m{
+    font-size: var(--heading3);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+h3{
+    font-size: var(--heading3);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytext {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextb {
+    font-size: var(--body);
+    color: var(--maroon);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bodytextbw {
+    font-size: var(--body);
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subtext{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.subtextb{
+    font-size: var(--subtext);
+    color: var(--black);
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+.captionm{
+    font-size: var(--caption);
+    color: var(--maroon); 
+    font-family: 'Montserrat', sans-serif;
+}
+.captionw{
+    font-size: var(--caption);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif; 
+}
+.captionbr{
+    font-size: var(--caption);
+    color: var(--red);
+    font-family: 'Montserrat', sans-serif;
+}
+.background {
+    background-color: var(--red);
+    height: 100%;
+}
+
+.header {
+  
+    gap: var(--value1);
+    padding: var(--value3) var(--value2);
+}
+.pagename{
+    margin: var(--value5) var(--value4) var(--value5) var(--value4);
+    text-align: center;
+}
+
+.pagecontent {
+    height: 90%;
+    padding-top: var(--value7);
+    padding-bottom: 96px;
+    border-radius: var(--value4) var(--value4) 0 0;
+    background-color: var(--white);
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.pagecontent p{
+    margin-top: var(--value4);
+    margin-bottom: var(--value4);
+    margin-left: var(--value4);
+    margin-right: var(--value4);
+
+}
+.button-ok {
+    background-color: var(--green);
+    outline: none;
+    border: 1px solid var(--green); 
+    border-radius: var(--value5); 
+    outline: none;
+    margin-right: 20px;
+}
+
+/* "Cancel" button with green outline and transparent background */
+.button-cancel {
+    background-color: transparent;
+    outline: none;
+    border: 2px solid var(--green); 
+    border-radius: var(--value5); 
+    outline: none;
+    color: var(--green);
+
+}
+
+/* Hover effect for "Ok" button */
+.button-ok:hover {
+    cursor: pointer;
+    background-color: #4fd68f;
+}
+
+/* Hover effect for "Cancel" button */
+.button-cancel:hover {
+    background-color: var(--red);
+    border: 2px solid var(--red); 
+    color: white;
+    cursor: pointer;
+}
+
+.mascot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 150px; 
+    padding: 0;
+    margin: 0;
+}
+
+.mascot div {
+    position: absolute;
+}
+
+.mama {
+    top: 5%;
+    left: -10%;
+}
+
+.gogo {
+    top: 45%;
+    left: 20%;
+}
+
+.dangdang {
+    top: 65%;
+    left: 50%;
+}
+
+.edu {
+    top: 85%;
+    left: 80%;
+}
+
+/* Optional: Adjust the size of each mascot */
+.mascot img {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+.dangdang img{
+    width: 90px;
+}
+@media (min-width: 500px) {
+
+    .mascot {
+        height: 200px;
+    }
+
+    .mascot img {
+        width: 100px;
+    }
+    .dangdang img {
+        width: 100px;
+    }
+
+    .mama { top: 0; left: -5%; }
+    .gogo { top: 40%; left: 25%; }
+    .dangdang { top: 60%; left: 55%; }
+    .edu { top: 80%; left: 88%; }
+}
+@media (min-width: 700px) {
+
+    .mascot {
+        height: 200px;
+    }
+
+    .mascot img {
+        width: 100px;
+    }
+    .dangdang img {
+        width: 100px;
+    }
+
+    .mama { top: 0; left: -5%; }
+    .gogo { top: 40%; left: 25%; }
+    .dangdang { top: 60%; left: 55%; }
+    .edu { top: 80%; left: 85%; }
+}
+
+@media (min-width: 1024px) {
+
+
+    .mascot {
+        height: 100px;
+    }
+
+    .mascot img {
+        width: 100px;
+    }
+    .dangdang img {
+        width: 90px;
+    }
+
+    .mama { top: 0; left: -2%; }
+    .gogo { top: 60%; left: 33%; }
+    .dangdang { top: 80%; left: 63%; }
+    .edu { top: 100%; left: 94%; }
+}
