@@ -437,7 +437,6 @@ h3 {
     padding: var(--value4);
     width: 85%;
     justify-items: center;
-    text-align: center;
     border-radius: var(--value2);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
 }
